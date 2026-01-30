@@ -6,10 +6,10 @@ STOCK_MODEL="SM-G990E"
 STOCK_CSC="THL"
 STOCK_IMEI="355798871234563"
 
-# The firmware to be used as source
-MODEL="SM-G990E"
-CSC="THL"
-IMEI="355798871234563"
+# The firmware to be used as source - s23fe
+MODEL="SM-S711B"
+CSC="EUX"
+IMEI="355915850121955"
 
 # Extra firmware which is optional
 EXTRA_MODEL=""
