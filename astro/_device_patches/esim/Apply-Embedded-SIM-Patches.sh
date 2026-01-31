@@ -15,22 +15,34 @@
 #  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 #
 
+ESIM_PATCH() {
+REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.android.app.esimkeystring.xml"
+REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.euicc.xml"
+REMOVE "system" "etc/sysconfig/preinstalled-packages-com.samsung.android.app.esimkeystring.xml"
+REMOVE "system" "etc/sysconfig/preinstalled-packages-com.samsung.euicc.xml"
+
+NUKE_BLOAT "EsimKeyString" "EuiccService"
+
+FF "COMMON_CONFIG_EMBEDDED_SIM_SLOTSWITCH" ""
+}
+
+RUN_CMD "Patching eSIM ..." ESIM_PATCH 
 
 
 # if GET_FEATURE SOURCE_HAVE_ESIM_SUPPORT; then
 #     if GET_FEATURE DEVICE_HAVE_ESIM_SUPPORT; then
 #         LOG_END "No eSIM changes required"
 #     else
-        LOG_BEGIN "Device does NOT support eSIM, removing blobs"
-            NUKE_BLOAT "EsimKeyString" "EuiccService"
+        # LOG_BEGIN "Device does NOT support eSIM, removing blobs"
+        #     NUKE_BLOAT "EsimKeyString" "EuiccService"
 
-            REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.android.app.esimkeystring.xml"
-            REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.euicc.xml"
-            REMOVE "system" "etc/sysconfig/preinstalled-packages-com.samsung.android.app.esimkeystring.xml"
-            REMOVE "system" "etc/sysconfig/preinstalled-packages-com.samsung.euicc.xml"
+        #     REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.android.app.esimkeystring.xml"
+        #     REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.euicc.xml"
+        #     REMOVE "system" "etc/sysconfig/preinstalled-packages-com.samsung.android.app.esimkeystring.xml"
+        #     REMOVE "system" "etc/sysconfig/preinstalled-packages-com.samsung.euicc.xml"
 
-            FF "COMMON_CONFIG_EMBEDDED_SIM_SLOTSWITCH" ""
-        LOG_END "eSIM blobs removed"
+        #     FF "COMMON_CONFIG_EMBEDDED_SIM_SLOTSWITCH" ""
+        # LOG_END "eSIM blobs removed"
 #     fi
 # else
 #     if GET_FEATURE DEVICE_HAVE_ESIM_SUPPORT; then
