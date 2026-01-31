@@ -60,7 +60,8 @@ ERROR_EXIT() {
     local TITLE="$1"
 
     printf "${RED}> %s${NC}\n" "$TITLE"
-    exit
+    printf ".........continuing next task"
+    # exit
 }
 
 
