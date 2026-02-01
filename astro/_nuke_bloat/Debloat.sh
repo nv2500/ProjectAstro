@@ -259,6 +259,15 @@ REMOVE "system" "etc/sysconfig/samsungsimunlock.xml"
 REMOVE "system" "lib64/android.security.securekeygeneration-ndk.so"
 REMOVE "system" "lib64/libssu_keystore2.so"
 
+# eSIM
+BLOAT_TARGETS+=(
+    "EsimKeyString"
+    "EuiccService"
+)
+
+REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.android.app.esimkeystring.xml"
+REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.euicc.xml"
+
 
 
 NUKE_BLOAT "${BLOAT_TARGETS[@]}"
