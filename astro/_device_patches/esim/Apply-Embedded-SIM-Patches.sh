@@ -17,11 +17,12 @@
 
 ESIM_PATCH() {
 REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.android.app.esimkeystring.xml"
+REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.android.app.telephonyui.esimclient.xml"
 REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.euicc.xml"
 REMOVE "system" "etc/sysconfig/preinstalled-packages-com.samsung.android.app.esimkeystring.xml"
 REMOVE "system" "etc/sysconfig/preinstalled-packages-com.samsung.euicc.xml"
 
-NUKE_BLOAT "EsimKeyString" "EuiccService"
+NUKE_BLOAT "EsimKeyString" "EuiccService" "EsimClient"
 
 FF "COMMON_CONFIG_EMBEDDED_SIM_SLOTSWITCH" ""
 }
