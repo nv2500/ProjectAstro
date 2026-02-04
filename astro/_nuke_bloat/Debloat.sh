@@ -88,21 +88,21 @@ REMOVE "product" "overlay/GmsConfigOverlaySearchSelector.apk"
 
 
 #  FACTORY & TEST TOOLS (HwModuleTest)
-BLOAT_TARGETS+=(
-    "Cameralyzer"
-    "FactoryAirCommandManager"
-    "FactoryCameraFB"
-    "HMT"
-    "WlanTest"
-    "FacAtFunction"
-    "FactoryTestProvider"
-    "AutomationTest_FB"
-    "DRParser"
-)
-
-REMOVE "system" "etc/default-permissions/default-permissions-com.sec.factory.cameralyzer.xml"
-REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.android.providers.factory.xml"
-REMOVE "system" "etc/permissions/privapp-permissions-com.sec.facatfunction.xml"
+# BLOAT_TARGETS+=(
+#     "Cameralyzer"
+#     "FactoryAirCommandManager"
+#     "FactoryCameraFB"
+#     "HMT"
+#     "WlanTest"
+#     "FacAtFunction"
+#     "FactoryTestProvider"
+#     "AutomationTest_FB"
+#     "DRParser"
+# )
+# 
+# REMOVE "system" "etc/default-permissions/default-permissions-com.sec.factory.cameralyzer.xml"
+# REMOVE "system" "etc/permissions/privapp-permissions-com.samsung.android.providers.factory.xml"
+# REMOVE "system" "etc/permissions/privapp-permissions-com.sec.facatfunction.xml"
 
 
 #  COVER SERVICES
@@ -114,13 +114,13 @@ REMOVE "system" "etc/permissions/privapp-permissions-com.sec.android.cover.ledco
 
 
 #  ACCESSIBILITY (Live Transcribe, Voice Access)
-BLOAT_TARGETS+=(
-    "LiveTranscribe"
-    "VoiceAccess"
-)
-
-REMOVE "system" "etc/sysconfig/feature-a11y-preload.xml"
-REMOVE "system" "etc/sysconfig/feature-a11y-preload-voacc.xml"
+# BLOAT_TARGETS+=(
+#     "LiveTranscribe"
+#     "VoiceAccess"
+# )
+# 
+# REMOVE "system" "etc/sysconfig/feature-a11y-preload.xml"
+# REMOVE "system" "etc/sysconfig/feature-a11y-preload-voacc.xml"
 
 
 #  META
